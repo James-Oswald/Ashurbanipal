@@ -1,0 +1,63 @@
+\pagestyle{empty}
+
+\cleardoublepage
+
+% Capa do verso do livro
+\begin{center}
+\begin{tikzpicture}[remember picture,overlay]
+    
+    % Fundo preto
+    \fill[background] (current page.south west) rectangle (current page.north east);    
+
+    % Padrão de círculos central
+    \begin{scope}[shift={(0, -0.55\paperheight)}, scale=1.0871]
+        \foreach \x in {-20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18} {
+            \foreach \y in {-2, 2} {
+                \begin{scope}[shift={(\x + 1, \y)}]
+                    \foreach \r in {0.2, 0.4, 0.6, 0.8, 1.0} {
+                        \draw[thick, circles] (0,0) circle (\r);
+                    }
+                \end{scope}
+            }
+            \foreach \y in {-3, -1, 1, 3} {
+                \begin{scope}[shift={(\x, \y)}]
+                    \foreach \r in {0.2, 0.4} {
+                        \draw[thick, circles] (0,0) circle (\r);
+                    }
+                \end{scope}
+            }
+            \foreach \y in {-1, 1} {
+                \begin{scope}[shift={(\x, 0)}]
+                    \foreach \r in {0.2, 0.4, 0.6, 0.8, 1.0} {
+                        \draw[thick, circles] (0,0) circle (\r);
+                    }
+                \end{scope}
+            }
+            \foreach \y in {-1, 1} {
+                \begin{scope}[shift={(\x, \y)}]
+                    \foreach \r in {0.2, 0.4, 0.6, 0.8, 1.0} {
+                        \fill[background] (0,0) circle (\r);
+                    }
+                \end{scope}
+            }
+            \foreach \y in {-1, 1} {
+                \begin{scope}[shift={(\x, \y)}]
+                    \foreach \r in {0.2, 0.4, 0.6, 0.8, 1.0} {
+                        \draw[thick, circles] (0,0) circle (\r);
+                    }
+                \end{scope}
+            }
+        }
+    \end{scope}
+
+    % Título
+    \node[white, anchor=north, text width =0.9\linewidth, align = justify] at ([yshift=-48pt] current page.north) {\scshape{In the wake of the Battle of Katze Plains, the banner of Ainz Ooal Gown flies proudly over the city of E-Rantel. The Sorcerous Kingdom has entered the world’s stage to the clamour of death and devastation; the surrounding nations fearfully prepare even as they reel from its calamitous debut. Within the borders of the newly annexed realm, its Human subjects cower in their homes as the Undead openly walk the streets and stalk the lands. Yet, when a destitute noble finds herself under the auspices of an unlikely benefactor, events are set into motion that will resound over the world for ages to come.}};
+
+    % Editor
+    \node[white, font=\Huge, anchor=south] (publisher) at ([yshift=32pt] current page.south) {\textcolor{title}{\scshape\large\publisher}};
+
+    % Editor Logo
+    \node[anchor=north, above=4pt of publisher.north] {\includegraphics[width=0.15\textwidth,decodearray={1 0 1 0 1 0 }]{../res/Momonga.png}};
+
+\end{tikzpicture}
+\end{center}

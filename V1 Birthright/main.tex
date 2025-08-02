@@ -1,0 +1,103 @@
+% Caraumã book template by @jndgomes
+% 2024 (c) Janderson Gomes
+% See more <artientista.blogspot.com> or <carauman.blogspot.com>
+
+% paper size is in preamble.sty
+\documentclass[12pt,openany]{book} 
+
+% Definindo proporção áurea
+\newcommand{\goldenratio}{1.618}
+
+% Codificação de entrada e saída
+\usepackage[T1]{fontenc}
+
+% Informações do livro
+\newcommand{\authorname}{Aeridinae Lunaris}
+\newcommand{\booktitle}{Birthright}
+\newcommand{\subtitle}{Valkyrie's Shadow I}
+\newcommand{\publisher}{Ashurbanipal}
+\newcommand{\editionyear}{2025}
+\newcommand{\isbn}{}
+\title{\booktitle}
+\author{\authorname}
+
+% Pacotes adicionais
+\usepackage{../res/options}
+
+% custom colors
+\definecolor{background}{HTML}{69c5a0}
+\definecolor{circles}{HTML}{ffffff}
+\definecolor{middlecircles}{HTML}{288D8A}
+
+
+\definecolor{title}{HTML}{ffffff}
+\definecolor{author}{HTML}{033854}
+\definecolor{subtitle}{HTML}{033854}
+
+\begin{document}
+
+% Front matter
+\frontmatter
+\input{frontmatter/titlepage}    
+\input{frontmatter/copyrightpage}  
+\input{../res/preface}        
+\input{../res/tocpage} 
+
+% Main matter
+\mainmatter
+\pagestyle{fancy}                  % Estilo de página fancy para o conteúdo principal
+
+% Conteúdo dos capítulos
+\part{Prelude}
+\input{content/a0c1}
+\input{content/a0c2}
+\part{Act 1}
+\input{content/a1c1}
+\input{content/a1c2}
+\input{content/a1c3}
+\input{content/a1c4}
+\input{content/a1c5}
+\input{content/a1c6}
+\input{content/a1c7}
+\input{content/a1c8}
+\input{content/a1c9}
+\input{content/a1c10}
+\input{content/a1c11}
+\input{content/a1c12}
+\input{content/a1c13}
+\input{content/a1c14}
+\input{content/a1c15}
+\input{content/a1c16}
+\part{Act 2}
+\input{content/a2c1}
+\input{content/a2c2}
+\input{content/a2c3}
+\input{content/a2c4}
+\input{content/a2c5}
+\input{content/a2c6}
+\input{content/a2c7}
+\input{content/a2c8}
+\input{content/a2c9}
+\input{content/a2c10}
+\input{content/a2c11}
+\input{content/a2c12}
+\input{content/a2c13}
+\input{content/a2c14}
+\input{content/a2c15}
+\input{content/a2c16}
+\input{content/a2c17}
+\input{content/a2c18}
+\input{content/a2c19}
+\input{content/a2c20}
+\input{content/a2c21}
+\input{content/a2c22}
+\input{content/a2c23}
+\input{content/a2c24}
+\input{content/a2c25}
+\part{Act 3}
+
+% Back matter
+\backmatter
+\input{frontmatter/backpage}       % Página final (contracapa)
+
+\end{document}

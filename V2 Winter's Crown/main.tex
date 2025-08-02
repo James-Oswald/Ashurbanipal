@@ -1,0 +1,75 @@
+% Caraumã book template by @jndgomes
+% 2024 (c) Janderson Gomes
+% See more <artientista.blogspot.com> or <carauman.blogspot.com>
+
+% paper size is in preamble.sty
+\documentclass[12pt,openany]{book} 
+
+% Definindo proporção áurea
+\newcommand{\goldenratio}{1.618}
+
+% Codificação de entrada e saída
+\usepackage[T1]{fontenc}
+
+% Informações do livro
+\newcommand{\authorname}{Aeridinae Lunaris}
+\newcommand{\booktitle}{Winter's Crown}
+\newcommand{\subtitle}{Valkyrie's Shadow II}
+\newcommand{\publisher}{Ashurbanipal}
+\newcommand{\editionyear}{2025}
+\newcommand{\isbn}{}
+\title{\booktitle}
+\author{\authorname}
+
+% Pacotes adicionais
+\usepackage{../res/options}
+
+% Custom colors for title and back
+\definecolor{background}{HTML}{AEDBF0}
+\definecolor{circles}{HTML}{ffffff}
+\definecolor{middlecircles}{HTML}{288D8A}
+
+\definecolor{title}{HTML}{ffffff}
+\definecolor{author}{HTML}{033854}
+\definecolor{subtitle}{HTML}{033854}
+
+\begin{document}
+
+% Front matter
+\frontmatter
+\input{frontmatter/titlepage}    
+\input{frontmatter/copyrightpage}  
+\input{../res/preface}        
+\input{../res/tocpage} 
+
+% Main matter
+\mainmatter
+\pagestyle{fancy}                  % Estilo de página fancy para o conteúdo principal
+
+\setcounter{part}{0}
+
+% % Conteúdo dos capítulos
+% \part{Act 1}
+% \input{content/a1c1}
+% \input{content/a1c2}
+% \input{content/a1c3}
+% \input{content/a1c4}
+% \input{content/a1c5}
+% \input{content/a1c6}
+% \input{content/a1c7}
+% \input{content/a1c8}
+% \input{content/a1c9}
+% \input{content/a1c10}
+% \input{content/a1c11}
+% \input{content/a1c12}
+% \input{content/a1c13}
+% \input{content/a1c14}
+% \input{content/a1c15}
+% \input{content/a1c16}
+% \part{Act 2}
+
+% Back matter
+\backmatter
+\input{frontmatter/backpage}       % Página final (contracapa)
+
+\end{document}
