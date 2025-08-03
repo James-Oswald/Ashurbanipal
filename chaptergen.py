@@ -1,6 +1,6 @@
 
-act = 3
-chapters = 22
+act = 1
+chapters = 25
 character = "Ludmila Zahradnik"
 
 # Generate a folder called chapters_templates
